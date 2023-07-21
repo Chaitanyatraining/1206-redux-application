@@ -1,0 +1,17 @@
+.img-size{
+  width: 100%;
+    height: 15vw;
+    object-fit: cover;  
+}
+
+.bg-lightgrey{
+  background-color: #fafafa;
+}
+
+.bg-shadow{
+  box-shadow: 0 4px 24px 0 lightgrey;
+}
+
+.h-60{
+  height:60px !important;
+}
