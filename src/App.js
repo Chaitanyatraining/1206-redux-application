@@ -1,13 +1,13 @@
 import './App.css';
 import Header from './Components/Header';
 import 'bootstrap/dist/css/bootstrap.min.css'
-import Products from './Components/Products';
+import Routing from './Routing';
 
 function App() {
   return (
     <div className="App">
     <Header />
-    <Products />
+    <Routing />
     </div>
   );
 }
