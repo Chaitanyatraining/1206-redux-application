@@ -1,18 +1,22 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import { fetchProducts } from "../redux/types/ProductActions";
+import { useDispatch } from "react-redux";
 
 const Products = () => {
   const [products, setProducts] = useState([]);
-
+ const dispatch = useDispatch()
+ 
   useEffect(() => {
-    getProductsData();
+    // getProductsData();
+    dispatch(fetchProducts())
   }, []);
 
-  const getProductsData = async () => {
-    const response = await fetch("https://fakestoreapi.com/products");
-    const data = await response.json();
-    setProducts(data);
-  };
+  // const getProductsData = async () => {
+  //   const response = await fetch("https://fakestoreapi.com/products");
+  //   const data = await response.json();
+  //   setProducts(data);
+  // };
 
   return (
     <>
