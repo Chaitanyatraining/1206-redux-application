@@ -15,10 +15,8 @@ export const ProductReducer = (state= initialState, action) => {
            const filteredProducts = state.cartData.filter((cartItem) => cartItem.id !== action.payload)
             return {...state, cartData:filteredProducts}
 
-            //  cartItem.id !== action.payload
-            // 1 !== 3 true
-            // 2 !== 3 true
-            // 3 !== 3 false
+        case ACTION_TYPE.FETCH_PRODUCTS:
+            return {...state, products: action.payload}
         default:
             return state;
     }

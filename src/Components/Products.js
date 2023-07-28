@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { fetchProducts } from "../redux/types/ProductActions";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 
 const Products = () => {
-  const [products, setProducts] = useState([]);
+  // const [products, setProducts] = useState([]);
+  const products = useSelector((state)=> state.productsData.products)
  const dispatch = useDispatch()
  
   useEffect(() => {
@@ -33,7 +34,7 @@ const Products = () => {
                             <div className="img-size text-center">
                                 <img src={product.image} className="img-fluid h-100" alt={product.title} />
                             </div>
-                            <div className="card-body ">
+                            <div className="card-body">
                                 <h5>{product.category}</h5>
                             </div>
                         </div>
